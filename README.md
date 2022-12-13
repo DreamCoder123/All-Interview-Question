@@ -12,3 +12,6 @@ Spring has a special design principle which is known as IoC (Inversion of Contro
 Spring is a lightweight, java based, loosely coupled framework.
 Spring provides generic abstraction layer for transaction management that is also very useful for container-less environments.
 Spring provides a convenient API to translate technology-specific exceptions (thrown by JDBC, Hibernate or other frameworks) into consistent, unchecked exceptions. This introduces abstraction and greatly simplifies exception handling.
+
+
+All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
