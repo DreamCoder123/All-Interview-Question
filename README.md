@@ -13,5 +13,7 @@ Spring is a lightweight, java based, loosely coupled framework.
 Spring provides generic abstraction layer for transaction management that is also very useful for container-less environments.
 Spring provides a convenient API to translate technology-specific exceptions (thrown by JDBC, Hibernate or other frameworks) into consistent, unchecked exceptions. This introduces abstraction and greatly simplifies exception handling.
 
+3. What is a Spring configuration file?
+A Spring configuration file is basically an XML file that mainly contains the classes information and describes how those classes are configured and linked to each other. The XML configuration files are verbose and cleaner.
 
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
