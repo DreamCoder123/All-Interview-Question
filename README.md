@@ -28,4 +28,10 @@ In Java, the 2 major ways of achieving dependency injection are:
 Constructor injection: Here, the IoC container invokes the class constructor with a number of arguments where each argument represents a dependency on the other class.
 Setter injection: Here, the spring container calls the setter methods on the beans after invoking a no-argument static factory method or default constructor to instantiate the bean
 
+6. Explain the difference between constructor and setter injection?
+In constructor injection, partial injection is not allowed whereas it is allowed in setter injection.
+The constructor injection doesn’t override the setter property whereas the same is not true for setter injection.
+Constructor injection creates a new instance if any modification is done. The creation of a new instance is not possible in setter injection.
+In case the bean has many properties, then constructor injection is preferred. If it has few properties, then setter injection is preferred
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
