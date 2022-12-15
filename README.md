@@ -19,4 +19,13 @@ A Spring configuration file is basically an XML file that mainly contains the cl
 4. What do you mean by IoC (Inversion of Control) Container?
 Spring container forms the core of the Spring Framework. The Spring container uses Dependency Injection (DI) for managing the application components by creating objects, wiring them together along with configuring and managing their overall life cycles. The instructions for the spring container to do the tasks can be provided either by XML configuration, Java annotations, or Java code.
 
+5. What do you understand by Dependency Injection?
+The main idea in Dependency Injection is that you don’t have to create your objects but you just have to describe how they should be created.
+
+The components and services need not be connected by us in the code directly. We have to describe which services are needed by which components in the configuration file. The IoC container present in Spring will wire them up together.
+
+In Java, the 2 major ways of achieving dependency injection are:
+Constructor injection: Here, the IoC container invokes the class constructor with a number of arguments where each argument represents a dependency on the other class.
+Setter injection: Here, the spring container calls the setter methods on the beans after invoking a no-argument static factory method or default constructor to instantiate the bean
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
