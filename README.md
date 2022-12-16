@@ -34,4 +34,9 @@ The constructor injection doesn’t override the setter property whereas the sam
 Constructor injection creates a new instance if any modification is done. The creation of a new instance is not possible in setter injection.
 In case the bean has many properties, then constructor injection is preferred. If it has few properties, then setter injection is preferred
 
+7. What are Spring Beans?
+They are the objects forming the backbone of the user’s application and are managed by the Spring IoC container.
+Spring beans are instantiated, configured, wired, and managed by IoC container.
+Beans are created with the configuration metadata that the users supply to the container (by means of XML or java annotations configurations.)
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
