@@ -56,5 +56,15 @@ Java-based configuration: Spring Framework introduced key features as part of ne
 @Bean annotation has the same role as the <bean/> element.
 Classes annotated with @Configuration allow to define inter-bean dependencies by simply calling other @Bean methods in the same class.
 
+9. What are the bean scopes available in Spring?
+The Spring Framework has five scope supports. They are:
+
+Singleton: The scope of bean definition while using this would be a single instance per IoC container.
+Prototype: Here, the scope for a single bean definition can be any number of object instances.
+Request: The scope of the bean definition is an HTTP request.
+Session: Here, the scope of the bean definition is HTTP-session.
+Global-session: The scope of the bean definition here is a Global HTTP session.
+Note: The last three scopes are available only if the users use web-aware ApplicationContext containers.
+
 
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
