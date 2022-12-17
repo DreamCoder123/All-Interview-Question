@@ -66,5 +66,16 @@ Session: Here, the scope of the bean definition is HTTP-session.
 Global-session: The scope of the bean definition here is a Global HTTP session.
 Note: The last three scopes are available only if the users use web-aware ApplicationContext containers.
 
+10. Explain Bean life cycle in Spring Bean Factory Container.
+The Bean life cycle is as follows:
+
+The IoC container instantiates the bean from the bean’s definition in the XML file.
+Spring then populates all of the properties using the dependency injection as specified in the bean definition.
+The bean factory container calls setBeanName() which take the bean ID and the corresponding bean has to implement BeanNameAware interface.
+The factory then calls setBeanFactory() by passing an instance of itself (if BeanFactoryAware interface is implemented in the bean).
+If BeanPostProcessors is associated with a bean, then the preProcessBeforeInitialization() methods are invoked.
+If an init-method is specified, then it will be called.
+Lastly, postProcessAfterInitialization() methods will be called if there are any BeanPostProcessors associated with the bean that needs to be run post creation.
+
 
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
