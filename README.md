@@ -77,5 +77,8 @@ If BeanPostProcessors is associated with a bean, then the preProcessBeforeInitia
 If an init-method is specified, then it will be called.
 Lastly, postProcessAfterInitialization() methods will be called if there are any BeanPostProcessors associated with the bean that needs to be run post creation.
 
+11. What do you understand by Bean Wiring.
+When beans are combined together within the Spring container, they are said to be wired or the phenomenon is called bean wiring.
+The Spring container should know what beans are needed and how the beans are dependent on each other while wiring beans. This is given by means of XML / Annotations / Java code-based configuration.
 
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
