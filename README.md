@@ -39,4 +39,22 @@ They are the objects forming the backbone of the user’s application and are ma
 Spring beans are instantiated, configured, wired, and managed by IoC container.
 Beans are created with the configuration metadata that the users supply to the container (by means of XML or java annotations configurations.)
 
+8. How is the configuration meta data provided to the spring container?
+There are 3 ways of providing the configuration metadata. They are as follows:
+
+XML-Based configuration: The bean configurations and their dependencies are specified in XML configuration files. This starts with a bean tag as shown below:
+   <bean id="interviewBitBean" class="org.intervuewBit.firstSpring.InterviewBitBean">
+    <property name="name" value="InterviewBit"></property>
+   </bean>
+Annotation-Based configuration: Instead of the XML approach, the beans can be configured into the component class itself by using annotations on the relevant class, method, or field declaration.
+Annotation wiring is not active in the Spring container by default. This has to be enabled in the Spring XML configuration file as shown below
+<beans>
+<context:annotation-config/>
+<!-- bean definitions go here -->
+</beans>
+Java-based configuration: Spring Framework introduced key features as part of new Java configuration support. This makes use of the @Configuration annotated classes and @Bean annotated methods. Note that:
+@Bean annotation has the same role as the <bean/> element.
+Classes annotated with @Configuration allow to define inter-bean dependencies by simply calling other @Bean methods in the same class.
+
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
