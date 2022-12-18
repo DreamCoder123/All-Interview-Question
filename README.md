@@ -107,4 +107,8 @@ Auto-Configuration: Provides a way to automatically configure an application bas
 Spring Boot was developed with the intention of lessening the lines of code.
 It offers production-ready support like monitoring and apps developed using spring boot are easier to launch.
    
+16. Differentiate between Spring and Spring Boot.
+The Spring Framework provides multiple features like dependency injection, data binding, aspect-oriented programming (AOP), data access, and many more that help easier development of web applications whereas Spring Boot helps in easier usage of the Spring Framework by simplifying or managing various loosely coupled blocks of Spring which are tedious and have a potential of becoming messy.
+Spring boot simplifies commonly used spring dependencies and runs applications straight from a command line. It also doesn’t require an application container and it helps in monitoring several components and configures them externally.
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
