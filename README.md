@@ -81,4 +81,14 @@ Lastly, postProcessAfterInitialization() methods will be called if there are any
 When beans are combined together within the Spring container, they are said to be wired or the phenomenon is called bean wiring.
 The Spring container should know what beans are needed and how the beans are dependent on each other while wiring beans. This is given by means of XML / Annotations / Java code-based configuration.
 
+12. What is autowiring and name the different modes of it?
+The IoC container autowires relationships between the application beans. Spring lets collaborators resolve which bean has to be wired automatically by inspecting the contents of the BeanFactory.
+Different modes of this process are:
+
+no: This means no autowiring and is the default setting. An explicit bean reference should be used for wiring.
+byName: The bean dependency is injected according to the name of the bean. This matches and wires its properties with the beans defined by the same names as per the configuration.
+byType: This injects the bean dependency based on type.
+constructor: Here, it injects the bean dependency by calling the constructor of the class. It has a large number of parameters.
+autodetect: First the container tries to wire using autowire by the constructor, if it isn't possible then it tries to autowire by byType.
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
