@@ -95,5 +95,8 @@ autodetect: First the container tries to wire using autowire by the constructor,
 Overriding possibility: Dependencies are specified using <constructor-arg> and <property>  settings that override autowiring.
 Data types restriction: Primitive data types, Strings, and Classes can’t be autowired.
    
-
+Spring Boot Interview Questions
+14. What do you understand by the term ‘Spring Boot’?
+Spring Boot is an open-source, java-based framework that provides support for Rapid Application Development and gives a platform for developing stand-alone and production-ready spring applications with a need for very few configurations.
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
