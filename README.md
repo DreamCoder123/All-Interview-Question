@@ -91,4 +91,9 @@ byType: This injects the bean dependency based on type.
 constructor: Here, it injects the bean dependency by calling the constructor of the class. It has a large number of parameters.
 autodetect: First the container tries to wire using autowire by the constructor, if it isn't possible then it tries to autowire by byType.
 
+13. What are the limitations of autowiring?
+Overriding possibility: Dependencies are specified using <constructor-arg> and <property>  settings that override autowiring.
+Data types restriction: Primitive data types, Strings, and Classes can’t be autowired.
+   
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
