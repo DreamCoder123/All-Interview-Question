@@ -99,4 +99,12 @@ Spring Boot Interview Questions
 14. What do you understand by the term ‘Spring Boot’?
 Spring Boot is an open-source, java-based framework that provides support for Rapid Application Development and gives a platform for developing stand-alone and production-ready spring applications with a need for very few configurations.
    
+15. Explain the advantages of using Spring Boot for application development.
+Spring Boot helps to create stand-alone applications which can be started using java.jar (Doesn’t require configuring WAR files).
+Spring Boot also offers pinpointed ‘started’ POMs to Maven configuration.
+Has provision to embed Undertow, Tomcat, Jetty, or other web servers directly.
+Auto-Configuration: Provides a way to automatically configure an application based on the dependencies present on the classpath.
+Spring Boot was developed with the intention of lessening the lines of code.
+It offers production-ready support like monitoring and apps developed using spring boot are easier to launch.
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
