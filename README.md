@@ -122,7 +122,10 @@ Logging and Security – This ensures that all the applications made using Sprin
 
 18. What does @SpringBootApplication annotation do internally?
 As per the Spring Boot documentation, the @SpringBootApplication annotation is one point replacement for using @Configuration, @EnableAutoConfiguration and @ComponentScan annotations alongside their default attributes.
+This enables the developer to use a single annotation instead of using multiple annotations thus lessening the lines of code. However, Spring provides loosely coupled features which is why we can use these annotations as per our project needs.
 
+19. What are the effects of running Spring Boot Application as “Java Application”?
+The application automatically launches the tomcat server as soon as it sees that we are running a web application.
 
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
