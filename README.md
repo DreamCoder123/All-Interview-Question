@@ -146,4 +146,14 @@ We can use the exclude attribute while using the annotation @SpringBootApplicati
 @SpringBootApplication(exclude= {Student.class})
 public class InterviewBitAppConfiguration {}
    
+24. How to disable specific auto-configuration class?
+You can use the exclude attribute of @EnableAutoConfiguration for this purpose as shown below:
+@EnableAutoConfiguration(exclude = {InterviewBitAutoConfiguration.class})
+If the class is not specified on the classpath, we can specify the fully qualified name as the value for the excludeName.
+
+//By using "excludeName"
+@EnableAutoConfiguration(excludeName={Foo.class})
+You can add into the application.properties and multiple classes can be added by keeping it comma-separated.
+   
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
