@@ -140,4 +140,10 @@ Profile-specific properties – Properties are loaded from the application-{prof
 Yes, we can change it by using the application properties file by adding a property of server.port and assigning it to any port you wish to.
 For example, if you want the port to be 8081, then you have to mention server.port=8081. Once the port number is mentioned, the application properties file will be automatically loaded by Spring Boot and the specified configurations will be applied to the application.
    
+23. Can you tell how to exclude any package without using the basePackages filter?
+We can use the exclude attribute while using the annotation @SpringBootApplication as follows: 
+
+@SpringBootApplication(exclude= {Student.class})
+public class InterviewBitAppConfiguration {}
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
