@@ -155,5 +155,7 @@ If the class is not specified on the classpath, we can specify the fully qualifi
 @EnableAutoConfiguration(excludeName={Foo.class})
 You can add into the application.properties and multiple classes can be added by keeping it comma-separated.
    
+25. Can the default web server in the Spring Boot application be disabled?
+Yes! application.properties is used to configure the web application type, by mentioning spring.main.web-application-type=none.
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
