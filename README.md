@@ -127,5 +127,7 @@ This enables the developer to use a single annotation instead of using multiple 
 19. What are the effects of running Spring Boot Application as “Java Application”?
 The application automatically launches the tomcat server as soon as it sees that we are running a web application.
 
-   
+20. What is Spring Boot dependency management system?
+It is basically used to manage dependencies and configuration automatically without the need of specifying the version for any of that dependencies.
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
