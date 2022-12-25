@@ -167,4 +167,9 @@ This is applied to a class to mark it as a request handler thereby creating REST
 org.springframework.web.bind.annotation.RestController has to be imported to use this annotation.
 Check out more Interview Questions on Spring Boot here.
 
+27. What is Spring AOP?
+Spring AOP (Aspect Oriented Programming) is similar to OOPs (Object Oriented Programming) as it also provides modularity.
+In AOP key unit is aspects or concerns which are nothing but stand-alone modules in the application. Some aspects have centralized code but other aspects may be scattered or tangled code like in the case of logging or transactions. These scattered aspects are called cross-cutting concern.
+A cross-cutting concern such as transaction management, authentication, logging, security etc is a concern that could affect the whole application and should be centralized in one location in code as much as possible for security and modularity purposes.
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
