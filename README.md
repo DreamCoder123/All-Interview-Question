@@ -157,5 +157,14 @@ You can add into the application.properties and multiple classes can be added by
    
 25. Can the default web server in the Spring Boot application be disabled?
 Yes! application.properties is used to configure the web application type, by mentioning spring.main.web-application-type=none.
-   
+
+26. What are the uses of @RequestMapping and @RestController annotations in Spring Boot?
+@RequestMapping:
+This provides the routing information and informs Spring that any HTTP request matching the URL must be mapped to the respective method.
+org.springframework.web.bind.annotation.RequestMapping has to be imported to use this annotation.
+@RestController:
+This is applied to a class to mark it as a request handler thereby creating RESTful web services using Spring MVC. This annotation adds the @ResponseBody and @Controller annotation to the class.
+org.springframework.web.bind.annotation.RestController has to be imported to use this annotation.
+Check out more Interview Questions on Spring Boot here.
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
