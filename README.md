@@ -195,5 +195,14 @@ To use this, use @Around annotation.
 A proxy pattern is a well-used design pattern where a proxy is an object that looks like another object but adds special functionality to it behind the scenes.
 Spring AOP follows proxy-based pattern and this is created by the AOP framework to implement the aspect contracts in runtime.
 The standard JDK dynamic proxies are default AOP proxies that enables any interface(s) to be proxied. Spring AOP can also use CGLIB proxies that are required to proxy classes, rather than interfaces. In case a business object does not implement an interface, then CGLIB proxies are used by default.
+
+30. What are some of the classes for Spring JDBC API?
+Following are the classes
+JdbcTemplate
+SimpleJdbcTemplate
+NamedParameterJdbcTemplate
+SimpleJdbcInsert
+SimpleJdbcCall
+The most commonly used one is JdbcTemplate. This internally uses the JDBC API and has the advantage that we don’t need to create connection, statement, start transaction, commit transaction, and close connection to execute different queries. All these are handled by JdbcTemplate itself. The developer can focus on executing the query directly.
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
