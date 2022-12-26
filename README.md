@@ -216,5 +216,9 @@ RowMapper:
 This is an enhanced version of ResultSetExtractor that saves a lot of code.
 It allows to map a row of the relations with the instance of the user-defined class.
 It iterates the ResultSet internally and adds it into the result collection thereby saving a lot of code to fetch records.
+
+32. What is Hibernate ORM Framework?
+Object-relational mapping (ORM) is the phenomenon of mapping application domain model objects to the relational database tables and vice versa.
+Hibernate is the most commonly used java based ORM framework.
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
