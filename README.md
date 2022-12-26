@@ -204,5 +204,17 @@ NamedParameterJdbcTemplate
 SimpleJdbcInsert
 SimpleJdbcCall
 The most commonly used one is JdbcTemplate. This internally uses the JDBC API and has the advantage that we don’t need to create connection, statement, start transaction, commit transaction, and close connection to execute different queries. All these are handled by JdbcTemplate itself. The developer can focus on executing the query directly.
+
+31. How can you fetch records by Spring JdbcTemplate?
+This can be done by using the query method of JdbcTemplate. There are two interfaces that help to do this:
+
+ResultSetExtractor:
+It defines only one method extractData that accepts ResultSet instance as a parameter and returns the list.
+Syntax:
+public T extractData(ResultSet rs) throws SQLException,DataAccessException;
+RowMapper:
+This is an enhanced version of ResultSetExtractor that saves a lot of code.
+It allows to map a row of the relations with the instance of the user-defined class.
+It iterates the ResultSet internally and adds it into the result collection thereby saving a lot of code to fetch records.
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
