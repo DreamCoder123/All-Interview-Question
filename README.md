@@ -171,5 +171,24 @@ Check out more Interview Questions on Spring Boot here.
 Spring AOP (Aspect Oriented Programming) is similar to OOPs (Object Oriented Programming) as it also provides modularity.
 In AOP key unit is aspects or concerns which are nothing but stand-alone modules in the application. Some aspects have centralized code but other aspects may be scattered or tangled code like in the case of logging or transactions. These scattered aspects are called cross-cutting concern.
 A cross-cutting concern such as transaction management, authentication, logging, security etc is a concern that could affect the whole application and should be centralized in one location in code as much as possible for security and modularity purposes.
-   
+
+28. What is an advice? Explain its types in spring.
+An advice is the implementation of cross-cutting concerns can be applied to other modules of the spring application. Advices are of mainly 5 types:
+
+Before:
+This advice executes before a join point, but it does not have the ability to prevent execution flow from proceeding to the join point (unless it throws an exception).
+To use this, use @Before annotation.
+AfterReturning:
+This advice is to be executed after a join point completes normally i.e if a method returns without throwing an exception.
+To use this, use @AfterReturning annotation.
+AfterThrowing:
+This advice is to be executed if a method exits by throwing an exception.
+To use this, use @AfterThrowing annotation.
+After:
+This advice is to be executed regardless of the means by which a join point exits (normal return or exception encounter).
+To use this, use @After annotation.
+Around:
+This is the most powerful advice surrounds a join point such as a method invocation.
+To use this, use @Around annotation.
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
