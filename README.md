@@ -191,4 +191,9 @@ Around:
 This is the most powerful advice surrounds a join point such as a method invocation.
 To use this, use @Around annotation.
 
+29. What is Spring AOP Proxy pattern?
+A proxy pattern is a well-used design pattern where a proxy is an object that looks like another object but adds special functionality to it behind the scenes.
+Spring AOP follows proxy-based pattern and this is created by the AOP framework to implement the aspect contracts in runtime.
+The standard JDK dynamic proxies are default AOP proxies that enables any interface(s) to be proxied. Spring AOP can also use CGLIB proxies that are required to proxy classes, rather than interfaces. In case a business object does not implement an interface, then CGLIB proxies are used by default.
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
