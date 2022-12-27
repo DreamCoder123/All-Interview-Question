@@ -252,5 +252,10 @@ Spring MVC framework provides customizable binding and validation.
 Also provides customizable locale and theme resolution.
 Spring MVC supports customizable handler mapping and view resolution too.
    
+38. What is DispatcherServlet in Spring MVC? In other words, can you explain the Spring MVC architecture?
+Spring MVC framework is built around a central servlet called DispatcherServlet that handles all the HTTP requests and responses. The DispatcherServlet does a lot more than that:
+
+It seamlessly integrates with the IoC container and allows you to use each feature of Spring in an easier manner.
+The DispatcherServlet contacts HandlerMapping to call the appropriate Controller for processing the request on receiving it. Then, the controller calls appropriate service methods to set or process the Model data. The service processes the data and returns the view name to DispatcherServlet. DispatcherServlet then takes the help of ViewResolver and picks up the defined view for the request. Once the view is decided, the DispatcherServlet passes the Model data to View where it is finally rendered on the browser.
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
