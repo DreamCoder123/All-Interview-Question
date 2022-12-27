@@ -237,5 +237,12 @@ This framework provides the reference implementation for JSR303 and JSR349 speci
 Prior to Hibernate 3.0.1, Spring provided 2 classes namely: HibernateDaoSupport to get the Session from Hibernate and HibernateTemplate for Spring transaction management purposes.
 However, from Hibernate 3.0.1 onwards, by using HibernateTemplate class we can use SessionFactory getCurrentSession() method to get the current session and then use it to get the transaction management benefits.
 HibernateTemplate has the benefit of exception translation but that can be achieved easily by using @Repository annotation with service classes.
+ 
+**Spring MVC Interview Questions**
+   
+36. What is the Spring MVC framework?
+Spring MVC is a request driven framework and one of the core components of the Spring framework.
+It comes with ready to use loosely coupled components and elements that greatly aid developers in building flexible and robust web applications.
+The MVC (Model - View - Controller) architecture separates and provides loose coupling between the different aspects of the application – input logic (Model), business logic (Controller), and UI logic (View).
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
