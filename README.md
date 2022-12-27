@@ -225,4 +225,12 @@ Hibernate is the most commonly used java based ORM framework.
 Inversion of Control approach by using Hibernate Template and Callback.
 Extending HibernateDAOSupport and Applying an AOP Interceptor node.
 
+34. What is Hibernate Validator Framework?
+Data validation is a crucial part of any application. We can find data validation in:
+UI layer before sending objects to the server
+At the server-side before processing it
+Before persisting data into the database
+Validation is a cross-cutting concern/task, so as good practice, we should try to keep it apart from our business logic. JSR303 and JSR349 provide specifications for bean validation by using annotations.
+This framework provides the reference implementation for JSR303 and JSR349 specifications.
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
