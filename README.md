@@ -245,4 +245,12 @@ Spring MVC is a request driven framework and one of the core components of the S
 It comes with ready to use loosely coupled components and elements that greatly aid developers in building flexible and robust web applications.
 The MVC (Model - View - Controller) architecture separates and provides loose coupling between the different aspects of the application – input logic (Model), business logic (Controller), and UI logic (View).
    
+37. What are the benefits of Spring MVC framework over other MVC frameworks?
+Clear separation of roles – There is a specialised dedicated object for every role.
+Reusable business code logic – With Spring MVC, there is no need for duplicating the code. Existing objects can be used as commands instead of replicating them in order to extend a particular framework base class.
+Spring MVC framework provides customizable binding and validation.
+Also provides customizable locale and theme resolution.
+Spring MVC supports customizable handler mapping and view resolution too.
+   
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
