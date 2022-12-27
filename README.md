@@ -221,4 +221,8 @@ It iterates the ResultSet internally and adds it into the result collection ther
 Object-relational mapping (ORM) is the phenomenon of mapping application domain model objects to the relational database tables and vice versa.
 Hibernate is the most commonly used java based ORM framework.
    
+33. What are the two ways of accessing Hibernate by using Spring.
+Inversion of Control approach by using Hibernate Template and Callback.
+Extending HibernateDAOSupport and Applying an AOP Interceptor node.
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
