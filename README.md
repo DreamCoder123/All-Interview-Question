@@ -232,5 +232,10 @@ At the server-side before processing it
 Before persisting data into the database
 Validation is a cross-cutting concern/task, so as good practice, we should try to keep it apart from our business logic. JSR303 and JSR349 provide specifications for bean validation by using annotations.
 This framework provides the reference implementation for JSR303 and JSR349 specifications.
+ 
+35. What is HibernateTemplate class?
+Prior to Hibernate 3.0.1, Spring provided 2 classes namely: HibernateDaoSupport to get the Session from Hibernate and HibernateTemplate for Spring transaction management purposes.
+However, from Hibernate 3.0.1 onwards, by using HibernateTemplate class we can use SessionFactory getCurrentSession() method to get the current session and then use it to get the transaction management benefits.
+HibernateTemplate has the benefit of exception translation but that can be achieved easily by using @Repository annotation with service classes.
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
