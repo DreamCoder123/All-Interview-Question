@@ -269,5 +269,10 @@ The @Controller is a stereotype Spring MVC annotation to define a Controller.
 
 41. Can you create a controller without using @Controller or @RestController annotations?
 Yes! You can create a controller without @Controller or @RestController annotations by annotating the Spring MVC Controller classes using the @Component annotation. In this case, the real job of request mapping to handler method is done using the @RequestMapping annotation.
+ 
+42. What is ContextLoaderListener and what does it do?
+The ContextLoaderListener loads and creates the ApplicationContext, so a developer need not write explicit code to do create it. In short, it is a listener that aids to bootstrap Spring MVC.
+The application context is where Spring bean resides. For a web application, there is a subclass called WebAppliationContext.
+The lifecycle of the ApplicationContext is tied to the lifecycle of the ServletContext by using ContextLoaderListener. The ServletContext from the WebApplicationContext can be obtained using the getServletContext() method.
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
