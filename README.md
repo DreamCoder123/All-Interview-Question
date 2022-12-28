@@ -286,5 +286,10 @@ public void getQuestions(@PathVariable("type") String type,
    /* Some code */
 }
 
+44. What is the Model in Spring MVC?
+Model is a reference to have the data for rendering.
+It is always created and passed to the view in Spring MVC. If a mapped controller method has Model as a parameter, then that model instance is automatically injected to that method.
+Any attributes set on the injected model would be preserved and passed to the View.
+   
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
