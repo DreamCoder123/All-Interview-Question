@@ -267,5 +267,7 @@ The default ViewResolver used in Spring MVC is InternalResourceViewResolver.
 40. What is the @Controller annotation used for?
 The @Controller is a stereotype Spring MVC annotation to define a Controller.
 
+41. Can you create a controller without using @Controller or @RestController annotations?
+Yes! You can create a controller without @Controller or @RestController annotations by annotating the Spring MVC Controller classes using the @Component annotation. In this case, the real job of request mapping to handler method is done using the @RequestMapping annotation.
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
