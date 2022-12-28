@@ -274,5 +274,17 @@ Yes! You can create a controller without @Controller or @RestController annotati
 The ContextLoaderListener loads and creates the ApplicationContext, so a developer need not write explicit code to do create it. In short, it is a listener that aids to bootstrap Spring MVC.
 The application context is where Spring bean resides. For a web application, there is a subclass called WebAppliationContext.
 The lifecycle of the ApplicationContext is tied to the lifecycle of the ServletContext by using ContextLoaderListener. The ServletContext from the WebApplicationContext can be obtained using the getServletContext() method.
+  
+43. What are the differences between @RequestParam and @PathVariable annotations?
+Even though both these annotations are used to extract some data from URL, there is a key difference between them.
+The @RequestParam is used to extract query parameters that is anything after “?” in the URL.
+The @PathVariable is used to extract the data present as part of the URI itself.]
+For example, if the given URL is http://localhost:8080/InterviewBit/Spring/SpringMVC/?format=json, then you can access the query parameter “format” using the @RequestParam annotation and /Spring/{type} using the @PathVariable, which will give you SpringMVC.
+@RequestMapping("/Spring/{type}")
+public void getQuestions(@PathVariable("type") String type, 
+                        @RequestParam(value = "format", required = false) String format){
+   /* Some code */
+}
+
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
