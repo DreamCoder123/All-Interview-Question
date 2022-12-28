@@ -263,5 +263,9 @@ It is a J2EE pattern that allows the applications to dynamically choose technolo
 Any technology like HTML, JSP, XSLT, JSF, or any other such technology can be used as View.
 The View Resolver has the information of different views. The Controller returns the name of the View which is then passed to View Resolver by the DispatcherServlet for selecting the appropriate View technology and then the data is displayed.
 The default ViewResolver used in Spring MVC is InternalResourceViewResolver.
+
+40. What is the @Controller annotation used for?
+The @Controller is a stereotype Spring MVC annotation to define a Controller.
+
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
