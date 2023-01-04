@@ -291,5 +291,30 @@ Model is a reference to have the data for rendering.
 It is always created and passed to the view in Spring MVC. If a mapped controller method has Model as a parameter, then that model instance is automatically injected to that method.
 Any attributes set on the injected model would be preserved and passed to the View.
    
+45. What is the use of @Autowired annotation?
+@Autowired annotation is meant for the injection of a bean by means of its type along with methods and fields. This helps the Spring framework to resolve dependencies by injecting and collaborating the beans into another bean. For example, consider the below code snippet:
+
+import org.Springframework.beans.factory.annotation.Autowired;
+import java.util.*;
+public class InterviewBit {
+   // Autowiring/Injecting FormatterUtil as dependency to InterviewBit class
+  @Autowired
+  private FormatterUtil formatterUtil;
+  
+  public Date something( String value ){
+     Date dateFormatted = formatterUtil.formatDate(value);
+     return dateFormatted
+   }
+}
+/**
+* Util class to format any string value to valid date format
+*/
+public class FormatterUtil {
+   
+   public Date formatDate(String value){
+       //code to format date
+   }
+}
+
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
