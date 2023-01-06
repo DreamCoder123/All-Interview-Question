@@ -425,6 +425,31 @@ public class UserBean {
    //some methods and properties
 }
    
+50. What is the importance of @Required annotation?
+The annotation is used for indicating that the property of the bean should be populated via autowiring or any explicit value during the bean definition at the configuration time. For example, consider a code snippet below where we need to have the values of age and the name:
+
+import org.Springframework.beans.factory.annotation.Required;
+public class User {
+   private int age;
+   private String name;
+   
+   @Required
+   public void setAge(int age) {
+       this.age = age;
+   }
+   public Integer getAge() {
+       return this.age;
+   }
+   
+   @Required
+   public void setName(String name) {
+       this.name = name;
+   }
+   public String getName() {
+       return this.name;
+   }
+}
+   
    
 
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
