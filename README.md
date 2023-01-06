@@ -322,5 +322,90 @@ The annotation plays a very important role in binding method parameters to the r
  
 47. What is the importance of the web.xml in Spring MVC?
 web.xml is also known as the Deployment Descriptor which has definitions of the servlets and their mappings, filters, and lifecycle listeners. It is also used for configuring the ContextLoaderListener. Whenever the application is deployed, a ContextLoaderListener instance is created by Servlet container which leads to a load of WebApplicationContext.
+
+48. What are the types of Spring MVC Dependency Injection?
+There are two types of DI (Dependency Injection):
+
+Construction-Based:
+This type of DI is accomplished when the Spring IoC (Inversion of Control) container invokes parameterized constructor having a dependency on other classes.
+This cannot instantiate the values partially and ensures that the dependency injection is done fully.
+There are two possible ways of achieving this:
+Annotation Configuration: This approach uses POJO objects and annotations for configuration. For example, consider the below code snippet:
+
+@Configuration
+@ComponentScan("com.interviewbit.constructordi")
+public class SpringAppConfig {
+   @Bean
+   public Shape shapes() {
+       return new Shapes("Rectangle");
+   }
+   @Bean
+   public Dimension dimensions() {
+       return new Dimension(4,3);
+   }
+}
+Here, the annotations are used for notifying the Spring runtime that the class specified with @Bean annotation is the provider of beans and the process of context scan needs to be performed on the package com.interviewbit.constructordi by means of @ComponentScan annotation. Next, we will be defining a Figure class component as below:
+
+@Component
+public class Figure {
+   private Shape shape;
+   private Dimension dimension;
    
+   @Autowired
+   public Figure(Shape shape, Dimension dimension) {
+       this.shape = shape;
+       this.dimension = dimension;
+   }
+}
+Spring encounters this Figure class while performing context scan and it initializes the instance of this class by invoking the constructor annotated with @Autowired. The Shape and Dimension instances are obtained by calling the methods annotated with @Bean in the SpringAppConfig class. Instances of Engine and Transmission will be obtained by calling @Bean annotated methods of the Config class. Finally, we need to bootstrap an ApplicationContext using our POJO configuration:
+
+ApplicationContext context = new AnnotationConfigApplicationContext(SpringAppConfig.class);
+Figure figure = context.getBean(Figure.class);
+XML Configuration: This is another way of configuring Spring runtime by using the XML configuration file. For example, consider the below code snippet in the springAppConfig.xml file:
+
+<bean id="toyota" class="com.interviewbit.constructordi.Figure">
+   <constructor-arg index="0" ref="shape"/>
+   <constructor-arg index="1" ref="dimension"/>
+</bean>
+<bean id="shape" class="com.interviewbit.constructordi.Shape">
+   <constructor-arg index="0" value="Rectangle"/>
+</bean>
+<bean id="dimension" class="com.interviewbit.constructordi.Dimension">
+   <constructor-arg index="0" value="4"/>
+   <constructor-arg index="1" value="3"/>
+</bean>
+The constructor-arg tag can accept either literal value or another bean’s reference and explicit index and type. The index and type arguments are used for resolving conflicts in cases of ambiguity.
+While bootstrapping this class, the Spring ApplicationContext needs to use ClassPathXmlApplicationContext as shown below:
+
+ApplicationContext context = new ClassPathXmlApplicationContext("springAppConfig.xml");
+Figure figure = context.getBean(Figure.class);
+Setter-Based:
+This form of DI is achieved when the Spring IoC container calls the bean’s setter method after a non-parameterized constructor is called to perform bean instantiation.
+It is possible to achieve circular dependency using setter injection.
+For achieving this type of DI, we need to configure it through the configuration file under the <property> tag. For example, consider a class InterviewBit that sets the property articles as shown below:
+package com.interviewbit.model;
+import com.interviewbit.model.Article;
+public class InterviewBit {
+   // Object of the Article interface
+   Article article;
+   public void setArticle(Article article)
+   {
+       this.article = article;
+   }
+}
+In the bean configuration file, we will be setting as below: 
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+   <bean id="InterviewBit" class="com.interviewbit.model.InterviewBit">
+       <property name="article">
+           <ref bean="JsonArticle" />
+       </property>
+   </bean>
+   <bean id="JsonArticle" class="com.interviewbit.bean.JsonArticle" />
+</beans>
+The ‘JsonArticle’ bean is injected into the InterviewBit class object by means of the setArticle method.
+In cases where both types of dependencies are used, then the setter dependency injection has more preference by considering the specificity nature.
+
+
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
