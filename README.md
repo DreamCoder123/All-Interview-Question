@@ -407,5 +407,24 @@ The ‘JsonArticle’ bean is injected into the InterviewBit class object by mea
 In cases where both types of dependencies are used, then the setter dependency injection has more preference by considering the specificity nature.
 
 
+49. What is the importance of session scope?
+Session scopes are used to create bean instances for HTTP sessions. This would mean that a single bean can be used for serving multiple HTTP requests. The scope of the bean can be defined by means of using scope attribute or using @Scope or @SessionScope annotations.
+
+Using scope attribute:
+<bean id="userBean" class="com.interviewbit.UserBean" scope="session"/>
+Using @Scope annotation:
+@Component
+@Scope("session")
+public class UserBean {
+   //some methods and properties
+}
+Using @SessionScope:
+@Component
+@SessionScope
+public class UserBean {
+   //some methods and properties
+}
+   
+   
 
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
