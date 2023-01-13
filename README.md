@@ -16,6 +16,7 @@ Spring provides generic abstraction layer for transaction management that is als
 Spring provides a convenient API to translate technology-specific exceptions (thrown by JDBC, Hibernate or other frameworks) into consistent, unchecked exceptions. This introduces abstraction and greatly simplifies exception handling.
 
 3. What is a Spring configuration file?
+4. 
 A Spring configuration file is basically an XML file that mainly contains the classes information and describes how those classes are configured and linked to each other. The XML configuration files are verbose and cleaner.
 
 4. What do you mean by IoC (Inversion of Control) Container?
