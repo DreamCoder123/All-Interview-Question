@@ -408,6 +408,7 @@ In cases where both types of dependencies are used, then the setter dependency i
 
 
 49. What is the importance of session scope?
+
 Session scopes are used to create bean instances for HTTP sessions. This would mean that a single bean can be used for serving multiple HTTP requests. The scope of the bean can be defined by means of using scope attribute or using @Scope or @SessionScope annotations.
 
 Using scope attribute:
@@ -426,6 +427,7 @@ public class UserBean {
 }
    
 50. What is the importance of @Required annotation?
+
 The annotation is used for indicating that the property of the bean should be populated via autowiring or any explicit value during the bean definition at the configuration time. For example, consider a code snippet below where we need to have the values of age and the name:
 
 import org.Springframework.beans.factory.annotation.Required;
@@ -451,5 +453,15 @@ public class User {
 }
    
    
+
+Q  Differentiate between the @Autowired and the @Inject annotations.
+
+@Autowired	@Inject
+This annotation is part of the Spring framework.	This annotation is part of Java CDI.
+Has required attribute.	Does not have the required attribute.
+Singleton is the default scope for autowired beans.	Prototype is the default scope of inject beans.
+In case of ambiguity, then @Qualifier annotation is to be used.	In case of ambiguity, then @Named qualifier needs to be used.
+Since this annotation is provided by the Spring framework, in case you shift to another Dependency injection framework, there would be a lot of refactoring needed.	Since this annotation is part of Java CDI, it is not framework dependent and hence less code refactoring when there are framework changes.
+
 
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
