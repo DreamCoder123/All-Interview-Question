@@ -143,6 +143,7 @@ Application Properties – By default, Spring Boot searches for the application 
 Profile-specific properties – Properties are loaded from the application-{profile}.properties file or its YAML file. This file resides in the same location as that of the non-specific property files and the {profile} placeholder refers to an active profile or an environment.
    
 22. Can we change the default port of the embedded Tomcat server in Spring boot?
+   
 Yes, we can change it by using the application properties file by adding a property of server.port and assigning it to any port you wish to.
 For example, if you want the port to be 8081, then you have to mention server.port=8081. Once the port number is mentioned, the application properties file will be automatically loaded by Spring Boot and the specified configurations will be applied to the application.
    
