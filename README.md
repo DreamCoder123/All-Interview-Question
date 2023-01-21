@@ -473,4 +473,7 @@ Since this annotation is provided by the Spring framework, in case you shift to 
 52. Are singleton beans thread-safe?
 No, the singleton beans are not thread-safe because the concept of thread-safety essentially deals with the execution of the program and the singleton is simply a design pattern meant for the creation of objects. Thread safety nature of a bean depends on the nature of its implementation.
 
+53. How can you achieve thread-safety in beans?
+The thread safety can be achieved by changing the scope of the bean to request, session or prototype but at the cost of performance. This is purely based on the project requirements.
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
