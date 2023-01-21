@@ -470,5 +470,7 @@ Singleton is the default scope for autowired beans.	Prototype is the default sco
 In case of ambiguity, then @Qualifier annotation is to be used.	In case of ambiguity, then @Named qualifier needs to be used.
 Since this annotation is provided by the Spring framework, in case you shift to another Dependency injection framework, there would be a lot of refactoring needed.	Since this annotation is part of Java CDI, it is not framework dependent and hence less code refactoring when there are framework changes.
 
+52. Are singleton beans thread-safe?
+No, the singleton beans are not thread-safe because the concept of thread-safety essentially deals with the execution of the program and the singleton is simply a design pattern meant for the creation of objects. Thread safety nature of a bean depends on the nature of its implementation.
 
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
