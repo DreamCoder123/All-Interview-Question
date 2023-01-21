@@ -476,4 +476,7 @@ No, the singleton beans are not thread-safe because the concept of thread-safety
 53. How can you achieve thread-safety in beans?
 The thread safety can be achieved by changing the scope of the bean to request, session or prototype but at the cost of performance. This is purely based on the project requirements.
    
+54. What is the significance of @Repository annotation?
+@Repository annotation indicates that a component is used as the repository that acts as a means to store, search or retrieve data. These can be added to the DAO classes.
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
