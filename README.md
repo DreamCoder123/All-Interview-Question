@@ -6,6 +6,7 @@ Spring is a powerful open-source, loosely coupled, lightweight, java framework m
 
 Q2. What are the features of Spring Framework?
 
+
 Spring framework follows layered architecture pattern that helps in the necessary components selection along with providing a robust and cohesive framework for J2EE applications development.
 The AOP (Aspect Oriented Programming) part of Spring supports unified development by ensuring separation of application’s business logic from other system services.
 Spring provides highly configurable MVC web application framework which has the ability to switch to other frameworks easily.
