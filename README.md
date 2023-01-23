@@ -509,5 +509,12 @@ Here, the load-on-startup tag is 1 which indicates that the DispatcherServlet is
 
 56. How is the root application context in Spring MVC loaded?
 The root application context is loaded using the ContextLoaderListener that belongs to the entire application. Spring MVC allows instantiating multiple DispatcherServlet and each of them have multiple contexts specific to them. They can have the same root context too.
+
+57. How does the Spring MVC flow look like? In other words, How does a DispatcherServlet know what Controller needs to be called when there is an incoming request to the Spring MVC?
+A Dispatcher Servlet knows which controller to call by means of handler mappings. These mappings have the mapping between the controller and the requests. BeanNameUrlHandlerMapping and SimpleUrlHandlerMapping are the two most commonly used handler mappings.
+
+BeanNameUrlHandlerMapping: When the URL request matches the bean name, the class corresponding to the bean definition is the actual controller that is responsible for processing the request.
+SimpleUrlHandlerMapping: Here, the mapping is very explicit. The number of URLs can be specified here and each URL is associated explicitly with a controller.
+If the Spring MVC is configured using annotations, then @RequestMapping annotations are used for this purpose. The @RequestMapping annotation is configured by making use of the URI path, HTTP methods, query parameters, and the HTTP Headers.
    
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
