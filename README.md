@@ -507,5 +507,7 @@ The dispatcher servlet is instantiated by means of servlet containers such as To
 </web-app>
 Here, the load-on-startup tag is 1 which indicates that the DispatcherServlet is instantiated whenever the Spring MVC application to the servlet container. During this process, it looks for the servlet-name-context.xml file and initializes beans that are defined in the file.
 
-
+56. How is the root application context in Spring MVC loaded?
+The root application context is loaded using the ContextLoaderListener that belongs to the entire application. Spring MVC allows instantiating multiple DispatcherServlet and each of them have multiple contexts specific to them. They can have the same root context too.
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
