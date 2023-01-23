@@ -481,4 +481,30 @@ The thread safety can be achieved by changing the scope of the bean to request, 
 54. What is the significance of @Repository annotation?
 @Repository annotation indicates that a component is used as the repository that acts as a means to store, search or retrieve data. These can be added to the DAO classes.
    
+55. How is the dispatcher servlet instantiated?
+The dispatcher servlet is instantiated by means of servlet containers such as Tomcat. The Dispatcher Servlet should be defined in web.xml The DispatcherServlet is instantiated by Servlet containers like Tomcat. The Dispatcher Servlet can be defined in web.xml as shown below:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+ <!-- Define Dispatcher Servlet -->
+ <servlet>
+   <servlet-name>appServlet</servlet-name>
+   <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+   <init-param>
+     <param-name>contextConfigLocation</param-name>
+     <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+   </init-param>
+   <load-on-startup>1</load-on-startup>
+ </servlet>
+
+ <servlet-mapping>
+   <servlet-name>InterviewBitServlet</servlet-name>
+   <url-pattern>/</url-pattern>
+ </servlet-mapping>
+
+</web-app>
+Here, the load-on-startup tag is 1 which indicates that the DispatcherServlet is instantiated whenever the Spring MVC application to the servlet container. During this process, it looks for the servlet-name-context.xml file and initializes beans that are defined in the file.
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
