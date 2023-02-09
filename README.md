@@ -521,4 +521,19 @@ If the Spring MVC is configured using annotations, then @RequestMapping annotati
 The view requires access to the model to render the output as the model contains the required data meant for rendering. The model is associated with the controller that processes the client requests and finally encapsulates the response into the Model object.
 
 
+59. Why do we need BindingResults?
+BindingResults is an important Spring interface that is within the org.Springframework.validation package. This interface has a very simple and easy process of invocation and plays a vital role in detecting errors in the submitted forms. However, care has to be taken by the developer to use the BindingResult parameter just after the object that needs validation. For example:
+
+@PostMapping("/interviewbit")
+public String registerCourse(@Valid RegisterUser registerUser,
+ BindingResult bindingResult, Model model) {
+   if (bindingResult.hasErrors()) {
+       return "home";
+   }
+   model.addAttribute("message", "Valid inputs");
+   return "home";
+}
+The Spring will understand to find the corresponding validators by checking the @Valid annotation on the parameter.
+   
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
