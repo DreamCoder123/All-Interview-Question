@@ -549,4 +549,13 @@ The only problem with this interface is that all the methods of this interface n
 The spring-mv.jar does not belong to the spring-core. This means that the jar has to be included in the project’s classpath if we have to use the Spring MVC framework in our project. For Java applications, the spring-mvc.jar is placed inside /WEB-INF/lib folder.
 
 
+62. What are the differences between the <context:annotation-config> vs <context:component-scan> tags?
+<context:annotation-config> is used for activating applied annotations in pre-registered beans in the application context. It also registers the beans defined in the config file and it scans the annotations within the beans and activates them.
+
+The <context:component-scan> tag does the task of <context:annotation-config> along with scanning the packages and registering the beans in the application context.
+
+<context:annotation-config> = Scan and activate annotations in pre-registered beans.
+<context:component-scan> = Register Bean + Scan and activate annotations in package.
+   
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
