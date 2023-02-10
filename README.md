@@ -535,5 +535,18 @@ public String registerCourse(@Valid RegisterUser registerUser,
 }
 The Spring will understand to find the corresponding validators by checking the @Valid annotation on the parameter.
    
-   
+ 
+60. What are Spring Interceptors?
+Spring Interceptors are used to pre-handle and post-handle the web requests in Spring MVC which are handled by Spring Controllers. This can be achieved by the HandlerInterceptor interface. These handlers are used for manipulating the model attributes that are passed to the controllers or the views.
+The Spring handler interceptor can be registered for specific URL mappings so that it can intercept only those requests. The custom handler interceptor must implement the HandlerInterceptor interface that has 3 callback methods that can be implemented:
+
+preHandle()
+postHandle()
+afterCompletion()
+The only problem with this interface is that all the methods of this interface need to be implemented irrespective of its requirements. This can be avoided if our handler class extends the HandlerInterceptorAdapter class that internally implements the HandlerInterceptor interface and provides default blank implementations.
+
+61. Is there any need to keepspring-mvc.jar on the classpath or is it already present as part of spring-core?
+The spring-mv.jar does not belong to the spring-core. This means that the jar has to be included in the project’s classpath if we have to use the Spring MVC framework in our project. For Java applications, the spring-mvc.jar is placed inside /WEB-INF/lib folder.
+
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
