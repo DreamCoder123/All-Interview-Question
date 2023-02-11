@@ -587,5 +587,12 @@ The validator class can be registered in the context file directly as a bean as 
 
 <bean id="userValidator" class="com.interviewbit.validators.UserValidator" />
 
+64. How to get ServletConfig and ServletContext objects in spring bean?
+This can be done by either implementing the spring-aware interfaces or by using the @Autowired annotation.
 
+@Autowired
+private ServletContext servletContext;
+@Autowired
+private ServletConfig servletConfig;
+   
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
