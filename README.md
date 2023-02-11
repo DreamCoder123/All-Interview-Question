@@ -558,4 +558,34 @@ The <context:component-scan> tag does the task of <context:annotation-config> al
 <context:component-scan> = Register Bean + Scan and activate annotations in package.
    
    
+63. How is the form data validation done in Spring Web MVC Framework?
+Spring MVC does the task of data validation using the validator object which implements the Validator interface. In the custom validator class that we have created, we can use the utility methods of the ValidationUtils class like rejectIfEmptyOrWhitespace() or rejectIfEmpty() to perform validation of the form fields.
+
+@Component
+public class UserValidator implements Validator
+{
+   public boolean supports(Class clazz) {
+       return UserVO.class.isAssignableFrom(clazz);
+   }
+ 
+   public void validate(Object target, Errors errors)
+   {
+       ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "error.name", "Name is required.");
+       ValidationUtils.rejectIfEmptyOrWhitespace(errors, "age", "error.age", "Age is required.");
+       ValidationUtils.rejectIfEmptyOrWhitespace(errors, "phone", "error.phone", "Phone is required.");
+   }
+}
+In the fields that are subject to validation, in case of errors, the validator methods would create field error and bind that to the field.
+
+To activate the custom validator as spring bean, then:
+
+We have to add the @Component annotation on the custom validator class and initiate the component scanning of the package containing the validator declarations by adding the below change:
+<context:component-scan base-package="com.interviewbit.validators"/>
+OR
+
+The validator class can be registered in the context file directly as a bean as shown:
+
+<bean id="userValidator" class="com.interviewbit.validators.UserValidator" />
+
+
 All Remaining Questions Reference is here:- https://www.interviewbit.com/spring-interview-questions/#spring-framework-features
