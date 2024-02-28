@@ -6,14 +6,14 @@ Spring is a powerful open-source, loosely coupled, lightweight, java framework m
 
 Q2. What are the features of Spring Framework?
 
-Spring framework follows layered architecture pattern that helps in the necessary components selection along with providing a robust and cohesive framework for J2EE applications development.
-The AOP (Aspect Oriented Programming) part of Spring supports unified development by ensuring separation of application’s business logic from other system services.
-Spring provides highly configurable MVC web application framework which has the ability to switch to other frameworks easily.
-Provides provision of creation and management of the configurations and defining the lifecycle of application objects.
-Spring has a special design principle which is known as IoC (Inversion of Control) that supports objects to give their dependencies rather than looking for creating dependent objects.
-Spring is a lightweight, java based, loosely coupled framework.
-Spring provides generic abstraction layer for transaction management that is also very useful for container-less environments.
-Spring provides a convenient API to translate technology-specific exceptions (thrown by JDBC, Hibernate or other frameworks) into consistent, unchecked exceptions. This introduces abstraction and greatly simplifies exception handling.
+1) Spring framework follows layered architecture pattern that helps in the necessary components selection along with providing a robust and cohesive framework for J2EE applications development.
+2) The AOP (Aspect Oriented Programming) part of Spring supports unified development by ensuring separation of application’s business logic from other system services.
+3) Spring provides highly configurable MVC web application framework which has the ability to switch to other frameworks easily.
+4) Provides Facility of creation and management of the configurations and defining the lifecycle of application objects.
+5) Spring has a special design principle which is known as IoC (Inversion of Control) that supports objects to give their dependencies rather than looking for creating dependent objects.
+6) Spring is a lightweight, java based, loosely coupled framework.
+7) Spring provides generic abstraction layer for transaction management that is also very useful for container-less environments.
+8) Spring provides a convenient API to translate technology-specific exceptions (thrown by JDBC, Hibernate or other frameworks) into consistent, unchecked exceptions. This introduces abstraction and greatly simplifies exception handling.
 
 3. What is a Spring configuration file?
 
